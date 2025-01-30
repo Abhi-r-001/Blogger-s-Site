@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <div
+    class="d-flex flex-column flex-shrink-0 p-3  text-bg-light sidebar"
+    style="width: 280px"
+  >
+
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#home"></use>
+          </svg>
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="/quotes" class="nav-link text-black hover">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#speedometer2"></use>
+          </svg>
+          Quotes
+        </a>
+      </li>
+
+      <li>
+        <a href="/FAQs" class="nav-link text-black hover">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#grid"></use>
+          </svg>
+          FAQs
+        </a>
+      </li>
+
+      <li>
+          <hr>
+          <div class="dropdown">
+              <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/dog-img.jpg" alt="profile" width="32" height="32" class="rounded-circle me-2">
+                <strong >Abhi</strong>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" >
+                <li><a class="dropdown-item" href="/create">New blog</a></li>
+                <li><a class="dropdown-item" href="/settings">Settings</a></li>
+                <li><a class="dropdown-item" href="/edit">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/signin">Sign out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <hr />
+      </div>
+</body>
+</html>

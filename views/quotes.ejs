@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Page</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Slabo+27px&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-family: 'Slabo 27px', serif;
+            color: #4e4e4e;
+            font-size: 3rem;
+            margin-top: 0;
+            padding-top: 20px;
+        }
+
+        .quote-container {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .quote-box {
+            background: #fff;
+            border-left: 10px solid #008080;
+            margin: 15px 0;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-box p {
+            font-size: 1.2rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        .quote-box span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #008080;
+        }
+
+        .quote-box:hover {
+            background-color: #f9f9f9;
+            border-left: 10px solid #2e8b57;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .add-quote-form {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .add-quote-form input, .add-quote-form textarea {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .add-quote-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #008080;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .add-quote-form button:hover {
+            background-color: #2e8b57;
+        }
+
+
+    </style>
+
+  
+</head>
+<body>
+    <%- include("partials/header.ejs")%>
+    <h1>Inspirational Quotes</h1>
+
+    <div class="quote-container">
+
+        <% const quotes = [
+            { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+            { text: "Success is not the key to happiness. Happiness is the key to success.", author: "Albert Schweitzer" },
+            { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+            { text: "In the middle of difficulty lies opportunity.", author: "Albert Einstein" },
+            { text: "You miss 100% of the shots you don't take.", author: "Wayne Gretzky" },
+            { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+            { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+            { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
+            { text: "It always seems impossible until it's done.", author: "Nelson Mandela" },
+            { text: "The best way to predict your future is to create it.", author: "Abraham Lincoln" }
+        ]; %>
+
+
+    <% if (quotes && quotes.length > 0) { %>
+        <% quotes.forEach(quote => { %>
+            <li><strong><%= quote.text %></strong> - <%= quote.author %></li>
+        <% }) %>
+    <% } else { %>
+        <p>No quotes yet. Add some!</p>
+    <% } %>
+
+        
+        
+
+</body>
+</html>
+
+
